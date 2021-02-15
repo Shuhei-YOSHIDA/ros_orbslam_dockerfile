@@ -40,3 +40,13 @@ $ cd ~/GIT/ORB_SLAM2
 # Execute example
 $ ./Example/Monocular/mono_tum Vocabulary/ORBvoc.txt Examples/Monocular/TUM1.yaml /shared_dir
 ```
+
+(In case without Nvidia GPU for host)
+```
+$ docker run -it \
+    --rm \
+    -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+    -e DISPLAY=$DISPLAY \
+    -v ~/rgbd_dataset_freiburg1_xyz:/shared_dir \
+    <TAG>
+```
